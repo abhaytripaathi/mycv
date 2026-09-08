@@ -57,8 +57,9 @@
   const status = document.getElementById('form-status');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
+
       const data = new FormData(contactForm);
       const name = (data.get('name') || '').toString().trim();
       const email = (data.get('email') || '').toString().trim();
@@ -69,11 +70,29 @@
         return;
       }
 
-      const to = 'abhaytripaathi.work@gmail.com';
-      const subject = encodeURIComponent(`Portfolio contact from ${name || 'Website Visitor'}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-      if (status) status.textContent = 'Opening your mail client…';
+      if (status) status.textContent = 'Sending your message...';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          if (status) status.textContent = `Thanks${name ? `, ${name}` : ''}! Your message has been sent successfully.`;
+          contactForm.reset();
+          return;
+        }
+
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData?.errors?.[0]?.message || 'Something went wrong while sending your message. Please try again.';
+        if (status) status.textContent = errorMessage;
+      } catch (error) {
+        if (status) status.textContent = 'There was a connection issue. Please try again or contact me directly.';
+      }
     });
   }
 
