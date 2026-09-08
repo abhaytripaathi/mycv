@@ -12,13 +12,11 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#home">Abhay Tripaathi</a>
+      <a class="logo" href="#home">Abhinandan S. Tripathi</a>
       <nav class="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
+        <button class="nav-tab is-active" data-target="profile-panel" type="button">Profile</button>
+        <button class="nav-tab" data-target="cv-panel" type="button">CV</button>
+        <button class="nav-tab" data-target="gallery-panel" type="button">Photos</button>
       </nav>
       <div class="header-actions">
         <a class="btn" href="https://abhaytripaathi.work.succeed.cl/" target="_blank" rel="noopener">Website</a>
@@ -27,185 +25,230 @@
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Hi, I’m Abhay Tripaathi</h1>
-          <p class="lead">Operations & Project Management leader with 15+ years' experience driving PMO governance, digital automation (RPA & Copilot), and financial operations across global IT and financial services.</p>
-          <ul class="contact-inline">
-            <li><strong>Email:</strong> <a href="mailto:abhaytripaathi.work@gmail.com">abhaytripaathi.work@gmail.com</a></li>
-            <li><strong>Phone:</strong> <a href="tel:+919396505045">+91 93965 05045</a></li>
-            <li><strong>Location:</strong> Lucknow, India (Open to Remote & Relocation)</li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abhaytripaathi" target="_blank" rel="noopener">/in/abhaytripaathi</a></li>
-          </ul>
+  <main class="container page-shell">
+    <section id="profile-panel" class="tab-panel is-active" aria-label="Profile tab">
+      <div id="home" class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1>Operations & Project Management Leader</h1>
+            <p class="lead">I bring 16+ years of experience building strong PMO frameworks, driving operational excellence, and enabling digital transformation through RPA, AI enablement, and stakeholder-focused governance across global IT and financial services.</p>
+            <ul class="contact-inline">
+              <li><strong>Email:</strong> <a href="mailto:abhaytripaathi.work@gmail.com">abhaytripaathi.work@gmail.com</a></li>
+              <li><strong>Phone:</strong> <a href="tel:+919396505045">+91 93965 05045</a></li>
+              <li><strong>Location:</strong> Lucknow, India (Open to Remote & Relocation)</li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abhaytripaathi" target="_blank" rel="noopener">https://www.linkedin.com/in/abhaytripaathi</a></li>
+            </ul>
 
-          <div class="hero-ctas">
-            <a class="btn primary" href="#projects">See projects</a>
-            <a class="btn" href="#contact">Get in touch</a>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#projects">See projects</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <img src="abhaypic.jpg" alt="Abhinandan S. Tripathi — profile photo" class="profile-photo">
           </div>
         </div>
+      </div>
 
-        <div class="hero-media">
-          <img src="abhaypic.jpg" alt="Abhay Tripaathi — profile photo" class="profile-photo">
+      <section id="about" class="section">
+        <h2>Professional Summary</h2>
+        <p>Strategic operations and project management professional with 16+ years of experience leading cross-functional teams, PMO governance, and transformation initiatives in IT and financial services. Skilled in planning, governance, financial reporting, risk control, and digital enablement, with proven success in aligning executive stakeholders, improving delivery performance, and scaling automation and AI adoption.</p>
+
+        <h3>Core Competencies</h3>
+        <ul class="competencies">
+          <li>PMO Governance & Executive Reporting</li>
+          <li>RPA Blueprinting & Automation Enablement</li>
+          <li>Financial Forecasting & Variance Analysis</li>
+          <li>Training, Capability Building & Leadership Enablement</li>
+          <li>Stakeholder Management & Risk/Issue Mitigation</li>
+        </ul>
+      </section>
+
+      <section id="education" class="section">
+        <h2>Education & Certifications</h2>
+        <ul class="cert-list">
+          <li><strong>PMP — Project Management Professional</strong> (PMI) — Certification #: 4409264 — Issued: 11 Jun 2026 — Valid until 11 Jun 2029</li>
+          <li><strong>AWS Partner Sales Accreditation</strong> — Issued: 25 Dec 2023</li>
+          <li><strong>AWS Certified Cloud Practitioner</strong> — Cert #: NXYC366K7N111S54 — Issued: 17 Sept 2023 — Valid until 17 Sept 2026</li>
+          <li><strong>MBA — Human Resource Management</strong>, Osmania University — 2019</li>
+          <li><strong>BA (English Honours)</strong>, Osmania University — 2015</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section">
+        <h2>Selected Projects & Initiatives</h2>
+        <p class="muted">Highlights of operational governance and automation initiatives.</p>
+
+        <article class="project-card">
+          <div class="project-body">
+            <h3>Operational PMO (Insurance — Global Delivery)</h3>
+            <p><strong>Role:</strong> Project PMO — Apr 2023 – Jan 2026</p>
+            <ul>
+              <li>Designed and ran PMO governance: integrated project plans, milestone tracking, RAID logs, and SLA frameworks for a large insurance client.</li>
+              <li>Owned financial governance: forecasting models, variance analysis, budget tracking and change request support.</li>
+              <li>Created executive reports and dashboards (Power BI / Tableau) used in steering committees and WBR/MBR forums.</li>
+              <li>Coordinated cross-functional teams (operations, finance, infra, RPA, app support) to maintain delivery SLAs and incident resolution for P1/P2 events.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-body">
+            <h3>RPA Deployment Feasibility PoC</h3>
+            <p><strong>Role:</strong> Project Coordinator — Oct 2022 – Mar 2023</p>
+            <ul>
+              <li>Led PoC for deploying 20 RPA bots — performed capacity planning, infrastructure readiness, access and application compatibility checks.</li>
+              <li>Evaluated deployment risks, defined scaling strategy and validated operational viability for large-scale bot operations.</li>
+              <li>Coordinated stakeholders across technology, operations and business to validate runbook and governance for bot onboarding.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Project PMO — Accenture Solutions Pvt. Ltd.</h3>
+            <p class="muted">Nov 2016 – Jan 2026 • Hyderabad, Bengaluru, Noida & Remote</p>
+            <ul>
+              <li>Directed PMO governance for a global insurance client — planning, resource & financial governance, risk mitigation, and delivery tracking across cross-functional teams.</li>
+              <li>Prepared executive dashboards, steering committee decks, WBR/MBR reports and performed variance analysis using Excel, Power BI and Tableau.</li>
+              <li>Led resource planning, onboarding/offboarding, contract tracking, and workforce allocation for multiple delivery teams.</li>
+              <li>Partnered with RPA and application teams to evaluate automation opportunities and improve operational throughput.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Project Coordinator / Command Center / RPA Business Analyst — Accenture (earlier roles)</h3>
+            <p class="muted">Oct 2022 – Mar 2023 (PoC) • Other internal roles during tenure</p>
+            <ul>
+              <li>Led PoC assessing feasibility of deploying 20 RPA bots: capacity planning, infra readiness, application compatibility and deployment risk evaluation.</li>
+              <li>Coordinated cross-functional assessments and produced capacity/utilization and deployment readiness reports.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Assistant Manager – Operations Analytics & WFM — Synchrony Financial (GE Capital)</h3>
+            <p class="muted">Mar 2011 – Nov 2016 • Hyderabad</p>
+            <ul>
+              <li>WFM analytics, forecasting, scheduling and operational reporting; supported call center sales and support operations.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Call Center Executive — Apollo Health Street Ltd.</h3>
+            <p class="muted">Oct 2009 – Jan 2011 • Hyderabad</p>
+            <ul>
+              <li>Outbound calling for US medical providers; early-career operations and client communications experience.</li>
+            </ul>
+          </div>
         </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <h4>Technical</h4>
+        <ul class="skills-list" aria-label="Technical skills">
+          <li>MS Project</li>
+          <li>Jira</li>
+          <li>MS-Excel (MIS Reporting), VBA</li>
+          <li>Power BI, Tableau</li>
+          <li>Power Apps, SharePoint, OneDrive</li>
+          <li>Blue Prism, Automation Anywhere, UiPath</li>
+          <li>SQL</li>
+          <li>Java, React JS (familiar)</li>
+          <li>Kronos / Verint / Aspect WFM</li>
+        </ul>
+
+        <h4>Soft Skills</h4>
+        <ul class="skills-list" aria-label="Soft skills">
+          <li>Active listening & stakeholder alignment</li>
+          <li>Emotional intelligence & team enablement</li>
+          <li>Adaptability & change leadership</li>
+          <li>Clear communication & executive reporting</li>
+          <li>Conflict resolution & escalation management</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p class="muted">Open to freelance and full-time opportunities. Available for remote work and relocation.</p>
+
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvzeeqpy" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" placeholder="Your name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="your@email.com">
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Brief message or opportunity details"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Send message</button>
+            <button type="reset" class="btn">Reset</button>
+          </div>
+
+          <p class="muted">Or contact directly: <a href="mailto:abhaytripaathi.work@gmail.com">abhaytripaathi.work@gmail.com</a> • <a href="tel:+919396505045">+91 93965 05045</a></p>
+          <p id="form-status" class="muted" aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+
+    <section id="cv-panel" class="tab-panel" aria-label="CV tab">
+      <div class="section-header">
+        <h2>Curriculum Vitae</h2>
+        <div class="section-actions">
+          <a class="btn primary" href="Abhay CV.pdf" target="_blank" rel="noopener">Open CV</a>
+          <a class="btn" href="Abhay CV.pdf" download>Download PDF</a>
+        </div>
+      </div>
+
+      <div class="cv-wrapper">
+        <object data="Abhay CV.pdf" type="application/pdf" class="cv-embed" aria-label="Abhay Tripaathi CV">
+          <p class="muted">Your browser cannot display the PDF. <a href="Abhay CV.pdf">Open the CV file directly</a>.</p>
+        </object>
       </div>
     </section>
 
-    <section id="about" class="section container">
-      <h2>Professional Summary</h2>
-      <p>Accomplished Operations and Project Management professional with over 15 years of cross-functional experience leading globally distributed teams within top-tier IT and financial firms. Proven expertise in PMO governance, infrastructure capability frameworks, stakeholder alignment, and financial forecasting. A proactive champion for AI-driven transformation, successfully scaling operational efficiencies through large-scale Copilot prompt training, robotic process automation (RPA) configurations, and scalable cloud structures.</p>
-
-      <h3>Core Competencies</h3>
-      <ul class="competencies">
-        <li>PMO Governance & Executive Reporting</li>
-        <li>RPA Blueprinting & Automation Enablement</li>
-        <li>Financial Forecasting & Variance Analysis</li>
-        <li>Training & Leadership Enablement</li>
-        <li>Stakeholder Management & Risk/Issue Mitigation</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="section container">
-      <h2>Experience</h2>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Project PMO — Accenture Solutions Pvt. Ltd.</h3>
-          <p class="muted">Nov 2016 – Jan 2026 • Hyderabad, Bengaluru, Noida & Remote</p>
-          <ul>
-            <li>Directed PMO governance for a global insurance client — planning, resource & financial governance, risk mitigation, and delivery tracking across cross-functional teams.</li>
-            <li>Prepared executive dashboards, steering committee decks, WBR/MBR reports and performed variance analysis using Excel, Power BI and Tableau.</li>
-            <li>Led resource planning, onboarding/offboarding, contract tracking, and workforce allocation for multiple delivery teams.</li>
-            <li>Partnered with RPA and application teams to evaluate automation opportunities and improve operational throughput.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Project Coordinator / Command Center / RPA Business Analyst — Accenture (earlier roles)</h3>
-          <p class="muted">Oct 2022 – Mar 2023 (PoC) • Other internal roles during tenure</p>
-          <ul>
-            <li>Led PoC assessing feasibility of deploying 20 RPA bots: capacity planning, infra readiness, application compatibility and deployment risk evaluation.</li>
-            <li>Coordinated cross-functional assessments and produced capacity/utilization and deployment readiness reports.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Assistant Manager – Operations Analytics & WFM — Synchrony Financial (GE Capital)</h3>
-          <p class="muted">Mar 2011 – Nov 2016 • Hyderabad</p>
-          <ul>
-            <li>WFM analytics, forecasting, scheduling and operational reporting; supported call center sales and support operations.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <h3>Call Center Executive — Apollo Health Street Ltd.</h3>
-          <p class="muted">Oct 2009 – Jan 2011 • Hyderabad</p>
-          <ul>
-            <li>Outbound calling for US medical providers; early-career operations and client communications experience.</li>
-          </ul>
-        </div>
+    <section id="gallery-panel" class="tab-panel" aria-label="Photo gallery tab">
+      <div class="section-header">
+        <h2>Update Pictures & Descriptions</h2>
       </div>
-    </section>
 
-    <section id="projects" class="section container">
-      <h2>Selected Projects & Initiatives</h2>
-      <p class="muted">Highlights of operational governance and automation initiatives.</p>
-
-      <article class="project-card">
-        <div class="project-body">
-          <h3>Operational PMO (Insurance — Global Delivery)</h3>
-          <p><strong>Role:</strong> Project PMO — Apr 2023 – Jan 2026</p>
-          <ul>
-            <li>Designed and ran PMO governance: integrated project plans, milestone tracking, RAID logs, and SLA frameworks for a large insurance client.</li>
-            <li>Owned financial governance: forecasting models, variance analysis, budget tracking and change request support.</li>
-            <li>Created executive reports and dashboards (Power BI / Tableau) used in steering committees and WBR/MBR forums.</li>
-            <li>Coordinated cross-functional teams (operations, finance, infra, RPA, app support) to maintain delivery SLAs and incident resolution for P1/P2 events.</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-body">
-          <h3>RPA Deployment Feasibility PoC</h3>
-          <p><strong>Role:</strong> Project Coordinator — Oct 2022 – Mar 2023</p>
-          <ul>
-            <li>Led PoC for deploying 20 RPA bots — performed capacity planning, infrastructure readiness, access and application compatibility checks.</li>
-            <li>Evaluated deployment risks, defined scaling strategy and validated operational viability for large-scale bot operations.</li>
-            <li>Coordinated stakeholders across technology, operations and business to validate runbook and governance for bot onboarding.</li>
-          </ul>
-        </div>
-      </article>
-    </section>
-
-    <section id="certifications" class="section container">
-      <h2>Education & Certifications</h2>
-      <ul class="cert-list">
-        <li><strong>PMP — Project Management Professional</strong> (PMI) — Certification #: 4409264 — Issued: 11 Jun 2026 — Valid until 11 Jun 2029</li>
-        <li><strong>AWS Partner Sales Accreditation</strong> — Issued: 25 Dec 2023</li>
-        <li><strong>AWS Certified Cloud Practitioner</strong> — Cert #: NXYC366K7N111S54 — Issued: 17 Sept 2023 — Valid until 17 Sept 2026</li>
-        <li><strong>MBA — Human Resource Management</strong>, Osmania University — 2019</li>
-        <li><strong>BA (English Honours)</strong>, Osmania University — 2015</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="section container">
-      <h2>Skills</h2>
-      <h4>Technical</h4>
-      <ul class="skills-list" aria-label="Technical skills">
-        <li>MS Project</li>
-        <li>Jira</li>
-        <li>MS-Excel (MIS Reporting), VBA</li>
-        <li>Power BI, Tableau</li>
-        <li>Power Apps, SharePoint, OneDrive</li>
-        <li>Blue Prism, Automation Anywhere, UiPath</li>
-        <li>SQL</li>
-        <li>Java, React JS (familiar)</li>
-        <li>Kronos / Verint / Aspect WFM</li>
-      </ul>
-
-      <h4>Soft Skills</h4>
-      <ul class="skills-list" aria-label="Soft skills">
-        <li>Active listening & stakeholder alignment</li>
-        <li>Emotional intelligence & team enablement</li>
-        <li>Adaptability & change leadership</li>
-        <li>Clear communication & executive reporting</li>
-        <li>Conflict resolution & escalation management</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section container">
-      <h2>Contact</h2>
-      <p class="muted">Open to freelance and full-time opportunities. Available for remote work and relocation.</p>
-
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvzeeqpy" method="POST">
+      <form id="gallery-form" class="gallery-form">
         <label>
-          <span>Name</span>
-          <input type="text" name="name" placeholder="Your name">
+          <span>Picture</span>
+          <input id="gallery-image" type="file" accept="image/*">
         </label>
         <label>
-          <span>Email</span>
-          <input type="email" name="email" placeholder="your@email.com">
+          <span>Title</span>
+          <input id="gallery-title" type="text" maxlength="60" placeholder="e.g. Profile shot">
         </label>
         <label>
-          <span>Message</span>
-          <textarea name="message" rows="6" placeholder="Brief message or opportunity details"></textarea>
+          <span>Description</span>
+          <textarea id="gallery-description" rows="4" maxlength="200" placeholder="Write a brief description for the picture"></textarea>
         </label>
-
         <div class="form-actions">
-          <button type="submit" class="btn primary">Send message</button>
-          <button type="reset" class="btn">Reset</button>
+          <button type="submit" class="btn primary">Save picture</button>
+          <button type="reset" class="btn">Clear</button>
         </div>
-
-        <p class="muted">Or contact directly: <a href="mailto:abhaytripaathi.work@gmail.com">abhaytripaathi.work@gmail.com</a> • <a href="tel:+919396505045">+91 93965 05045</a></p>
-        <p id="form-status" class="muted" aria-live="polite"></p>
       </form>
+
+      <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> Abhay Tripaathi — Built with HTML, CSS &amp; JS</div>
+      <div>© <span id="year"></span> Abhinandan S. Tripathi — Built with HTML, CSS &amp; JS</div>
       <div class="social">
         <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/abhaytripaathi" target="_blank" rel="noopener">LinkedIn</a>
@@ -214,6 +257,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
