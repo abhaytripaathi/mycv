@@ -231,6 +231,308 @@ button, input, textarea { font: inherit; }
   margin-bottom: 0.75rem;
 }
 
+.timeline-intro {
+  max-width: 720px;
+  padding: 3.4rem 0 2.2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.timeline-intro h1 {
+  margin: 0;
+  max-width: 680px;
+  color: var(--primary-dark);
+  font-size: clamp(2.4rem, 6vw, 4.7rem);
+  line-height: 0.98;
+}
+
+.timeline-lead {
+  max-width: 600px;
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.timeline-board {
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  --timeline-origin: 7rem;
+  --year-step: 4.25rem;
+}
+
+.timeline-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr);
+  gap: 1.1rem;
+  height: calc(var(--timeline-origin) + (17 * var(--year-step)) + 7rem);
+  padding: 0;
+  scroll-margin-top: 7rem;
+}
+
+.timeline-side {
+  position: relative;
+}
+
+.timeline-side-left {
+  text-align: right;
+}
+
+.timeline-side-left .timeline-card {
+  text-align: left;
+}
+
+.timeline-side-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  position: absolute;
+  top: 1rem;
+  min-height: 3.4rem;
+}
+
+.timeline-side-left .timeline-side-heading {
+  justify-content: flex-end;
+}
+
+.timeline-side-heading h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.75rem;
+}
+
+.timeline-spine {
+  position: relative;
+}
+
+.spine-line {
+  position: absolute;
+  top: var(--timeline-origin);
+  bottom: 2rem;
+  left: 50%;
+  width: 5px;
+  border-radius: 999px;
+  background: #302f2a;
+  content: "";
+  transform: translateX(-50%);
+}
+
+.timeline-card {
+  position: relative;
+  z-index: 1;
+  position: absolute;
+  top: var(--card-top);
+  left: 0;
+  width: 100%;
+  min-height: 9rem;
+  height: max(var(--card-height), 9rem);
+  padding: 1rem 1.3rem;
+  border-radius: 24px;
+  border: 4px solid var(--card-border);
+  color: #203f92;
+  box-shadow: 0 14px 0 rgba(32, 63, 146, 0.1);
+}
+
+.timeline-card::after {
+  position: absolute;
+  top: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 3px solid var(--card-border);
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.timeline-side-left .timeline-card::after {
+  right: -2.2rem;
+}
+
+.timeline-side-right .timeline-card::after {
+  left: -2.2rem;
+}
+
+.timeline-career {
+  background: #c6d8ff;
+  --card-border: #7599e2;
+}
+
+.timeline-education {
+  background: #b5f0cb;
+  --card-border: #55b879;
+  --card-height: 12rem;
+  color: #087b2d;
+  box-shadow: 0 14px 0 rgba(8, 123, 45, 0.1);
+}
+
+.timeline-year {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  color: currentColor;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.spine-marker {
+  position: absolute;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 4.1rem;
+  height: 2.2rem;
+  border: 3px solid #302f2a;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+}
+
+.spine-marker-1 { top: var(--timeline-origin); }
+.spine-marker-2 { top: calc(var(--timeline-origin) + (2 * var(--year-step))); }
+.spine-marker-3 { top: calc(var(--timeline-origin) + (7 * var(--year-step))); }
+.spine-marker-4 { top: calc(var(--timeline-origin) + (10 * var(--year-step))); }
+.spine-marker-5 { top: calc(var(--timeline-origin) + (14 * var(--year-step))); }
+.spine-marker-6 { top: calc(var(--timeline-origin) + (17 * var(--year-step))); }
+
+.timeline-side-left article:nth-of-type(1) {
+  --card-top: var(--timeline-origin);
+  --card-height: calc(2 * var(--year-step));
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.timeline-side-left article:nth-of-type(1) .timeline-year {
+  margin-bottom: 0.25rem;
+  font-size: 1.35rem;
+}
+
+.timeline-side-left article:nth-of-type(1) h2 {
+  font-size: 1.15rem;
+}
+
+.timeline-side-left article:nth-of-type(1) .timeline-org {
+  margin-bottom: 0.25rem;
+  font-size: 0.76rem;
+}
+
+.timeline-side-left article:nth-of-type(1) p:not(.timeline-org) {
+  font-size: 0.7rem;
+  line-height: 1.25;
+}
+
+.timeline-side-left article:nth-of-type(2) {
+  --card-top: calc(var(--timeline-origin) + (2 * var(--year-step)));
+  --card-height: calc(5 * var(--year-step));
+}
+
+.timeline-side-left article:nth-of-type(3) {
+  --card-top: calc(var(--timeline-origin) + (7 * var(--year-step)));
+  --card-height: calc(10 * var(--year-step));
+}
+
+.timeline-side-right article:nth-of-type(1) {
+  --card-top: calc(var(--timeline-origin) + (6 * var(--year-step)) - 5.5rem);
+  --card-height: 12rem;
+}
+
+.timeline-side-right article:nth-of-type(2) {
+  --card-top: calc(var(--timeline-origin) + (10 * var(--year-step)) - 4.25rem);
+  --card-height: 12rem;
+}
+
+.timeline-side-right article:nth-of-type(3) {
+  --card-top: calc(var(--timeline-origin) + (14 * var(--year-step)) - 5.5rem);
+  --card-height: 12rem;
+}
+
+.timeline-side-right article:nth-of-type(4) {
+  --card-top: calc(var(--timeline-origin) + (17 * var(--year-step)) - 5.5rem);
+  --card-height: 12rem;
+}
+
+.timeline-side-left .timeline-card:nth-of-type(2)::after {
+  background: #c6d8ff;
+}
+
+.timeline-card h2 {
+  margin: 0;
+  color: currentColor;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  line-height: 1.25;
+}
+
+.timeline-org {
+  margin: 0.15rem 0 0.35rem;
+  color: currentColor;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.timeline-card p:not(.timeline-org) {
+  margin: 0;
+  color: currentColor;
+  font-size: 0.78rem;
+  line-height: 1.42;
+  opacity: 0.9;
+}
+
+.timeline-education p:not(.timeline-org) {
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.role-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.85rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-list li {
+  display: grid;
+  gap: 0.1rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba(109, 40, 217, 0.25);
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.role-list li span {
+  color: currentColor;
+  font-size: 0.72rem;
+  opacity: 0.78;
+}
+
+.journey-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.journey-tags span {
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -435,7 +737,7 @@ button, input, textarea { font: inherit; }
   text-decoration: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
@@ -447,6 +749,104 @@ button, input, textarea { font: inherit; }
 
   .profile-photo {
     margin: 0 auto;
+  }
+
+  .timeline-board {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .timeline-layout {
+    display: block;
+    height: auto;
+    padding: 1rem 0 2rem 2rem;
+  }
+
+  .timeline-spine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0.6rem;
+    width: 3px;
+  }
+
+  .spine-line {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+  }
+
+  .spine-marker {
+    display: none;
+  }
+
+  .timeline-side,
+  .timeline-side-left,
+  .timeline-side-right {
+    display: grid;
+    gap: 1rem;
+    padding: 0 0 2rem;
+    text-align: left;
+  }
+
+  .timeline-side-heading,
+  .timeline-side-left .timeline-side-heading {
+    position: relative;
+    top: auto;
+    justify-content: flex-start;
+  }
+
+  .timeline-card {
+    position: relative;
+    top: auto !important;
+    left: auto;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+
+  .timeline-side-heading {
+    min-height: 3rem;
+  }
+
+  .timeline-side-heading h2 {
+    font-size: 1.25rem;
+  }
+
+  .timeline-year {
+    font-size: 1.2rem;
+  }
+
+  .timeline-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-card::after {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-width: 4px;
+  }
+
+  .timeline-side-left .timeline-card::after {
+    right: auto;
+    left: -1.85rem;
+  }
+
+  .timeline-side-right .timeline-card::after {
+    left: -1.15rem;
+  }
+
+  .spine-line {
+    top: 2.5rem;
+  }
+
+  .spine-marker {
+    width: 3.5rem;
+    height: 1.8rem;
+    font-size: 0.65rem;
   }
 }
 
