@@ -1,6 +1,9 @@
 (function () {
   const toggle = document.getElementById('theme-toggle');
   const yearEl = document.getElementById('year');
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.querySelector('.lightbox-close');
 
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
@@ -31,6 +34,22 @@
       });
     });
   });
+
+  if (lightbox && lightboxImage) {
+    document.querySelectorAll('#gallery-photo-grid img').forEach((image) => {
+      image.classList.add('expandable-image');
+      image.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightbox.showModal();
+      });
+    });
+
+    lightboxClose?.addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+  }
 
   const contactForm = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
