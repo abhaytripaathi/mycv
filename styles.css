@@ -265,7 +265,7 @@ button, input, textarea { font: inherit; }
   max-width: 1040px;
   margin: 0 auto;
   padding-bottom: 2rem;
-  --timeline-origin: 7rem;
+  --timeline-origin: 11rem;
   --year-step: 4.25rem;
 }
 
@@ -349,7 +349,7 @@ button, input, textarea { font: inherit; }
   height: 1.25rem;
   border: 3px solid var(--card-border);
   border-radius: 50%;
-  background: currentColor;
+  background: #f7fbff;
   content: "";
   transform: translateY(-50%);
 }
@@ -373,6 +373,10 @@ button, input, textarea { font: inherit; }
   --card-height: 12rem;
   color: #087b2d;
   box-shadow: 0 14px 0 rgba(8, 123, 45, 0.1);
+}
+
+.timeline-education::after {
+  background: #ecfff2;
 }
 
 .timeline-year {
@@ -401,14 +405,14 @@ button, input, textarea { font: inherit; }
 }
 
 .spine-marker-1 { top: var(--timeline-origin); }
-.spine-marker-2 { top: calc(var(--timeline-origin) + (2 * var(--year-step))); }
+.spine-marker-2 { top: calc(var(--timeline-origin) + (3 * var(--year-step))); }
 .spine-marker-3 { top: calc(var(--timeline-origin) + (7 * var(--year-step))); }
 .spine-marker-4 { top: calc(var(--timeline-origin) + (10 * var(--year-step))); }
-.spine-marker-5 { top: calc(var(--timeline-origin) + (14 * var(--year-step))); }
+.spine-marker-5 { top: calc(var(--timeline-origin) + (15 * var(--year-step))); }
 .spine-marker-6 { top: calc(var(--timeline-origin) + (17 * var(--year-step))); }
 
 .timeline-side-left article:nth-of-type(1) {
-  --card-top: var(--timeline-origin);
+  --card-top: calc(var(--timeline-origin) + (15 * var(--year-step)));
   --card-height: calc(2 * var(--year-step));
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
@@ -434,37 +438,37 @@ button, input, textarea { font: inherit; }
 }
 
 .timeline-side-left article:nth-of-type(2) {
-  --card-top: calc(var(--timeline-origin) + (2 * var(--year-step)));
+  --card-top: calc(var(--timeline-origin) + (10 * var(--year-step)));
   --card-height: calc(5 * var(--year-step));
 }
 
 .timeline-side-left article:nth-of-type(3) {
-  --card-top: calc(var(--timeline-origin) + (7 * var(--year-step)));
+  --card-top: var(--timeline-origin);
   --card-height: calc(10 * var(--year-step));
 }
 
 .timeline-side-right article:nth-of-type(1) {
-  --card-top: calc(var(--timeline-origin) + (6 * var(--year-step)) - 5.5rem);
+  --card-top: calc(var(--timeline-origin) + (11 * var(--year-step)) - 5.5rem);
   --card-height: 12rem;
 }
 
 .timeline-side-right article:nth-of-type(2) {
-  --card-top: calc(var(--timeline-origin) + (10 * var(--year-step)) - 4.25rem);
+  --card-top: calc(var(--timeline-origin) + (7 * var(--year-step)) - 5.5rem);
   --card-height: 12rem;
 }
 
 .timeline-side-right article:nth-of-type(3) {
-  --card-top: calc(var(--timeline-origin) + (14 * var(--year-step)) - 5.5rem);
+  --card-top: calc(var(--timeline-origin) + (3 * var(--year-step)) - 5.5rem);
   --card-height: 12rem;
 }
 
 .timeline-side-right article:nth-of-type(4) {
-  --card-top: calc(var(--timeline-origin) + (17 * var(--year-step)) - 5.5rem);
+  --card-top: calc(var(--timeline-origin) - 5.5rem);
   --card-height: 12rem;
 }
 
-.timeline-side-left .timeline-card:nth-of-type(2)::after {
-  background: #c6d8ff;
+.timeline-career::after {
+  background: #eaf2ff;
 }
 
 .timeline-card h2 {
@@ -545,8 +549,7 @@ button, input, textarea { font: inherit; }
 .timeline-item,
 .project-card,
 .gallery-item,
-.cv-wrapper,
-.gallery-form {
+.cv-wrapper {
   background: linear-gradient(180deg, var(--surface), rgba(255, 255, 255, 0.35));
   border: 1px solid rgba(77, 29, 149, 0.1);
   border-radius: var(--radius);
@@ -599,8 +602,7 @@ button, input, textarea { font: inherit; }
   padding-left: 1.2rem;
 }
 
-.contact-form,
-.gallery-form {
+.contact-form {
   display: grid;
   gap: 0.9rem;
   max-width: 760px;
@@ -608,7 +610,6 @@ button, input, textarea { font: inherit; }
 }
 
 .contact-form label,
-.gallery-form label,
 .gallery-content label {
   display: flex;
   flex-direction: column;
@@ -618,8 +619,6 @@ button, input, textarea { font: inherit; }
 
 .contact-form input,
 .contact-form textarea,
-.gallery-form input,
-.gallery-form textarea,
 .gallery-edit {
   width: 100%;
   border-radius: 10px;
@@ -631,26 +630,21 @@ button, input, textarea { font: inherit; }
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.contact-form input:nth-of-type(1),
-.gallery-form input:nth-of-type(1) {
+.contact-form input:nth-of-type(1) {
   background: linear-gradient(135deg, rgba(232, 220, 255, 0.95), rgba(255, 255, 255, 0.85));
 }
 
-.contact-form input:nth-of-type(2),
-.gallery-form input:nth-of-type(2) {
+.contact-form input:nth-of-type(2) {
   background: linear-gradient(135deg, rgba(227, 214, 255, 0.95), rgba(255, 255, 255, 0.85));
 }
 
 .contact-form textarea,
-.gallery-form textarea,
 .gallery-edit {
   background: linear-gradient(135deg, rgba(240, 231, 255, 0.96), rgba(255, 255, 255, 0.86));
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus,
-.gallery-form input:focus,
-.gallery-form textarea:focus,
 .gallery-edit:focus {
   outline: none;
   border-color: rgba(109, 40, 217, 0.8);
@@ -687,20 +681,55 @@ button, input, textarea { font: inherit; }
   margin-top: 1.5rem;
 }
 
+.gallery-section + .gallery-section {
+  margin-top: 2.5rem;
+}
+
+.gallery-section > h2 {
+  margin: 0;
+  color: var(--primary-dark);
+}
+
 .gallery-item {
   overflow: hidden;
 }
 
-.gallery-image {
+.media-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--surface), var(--surface-strong));
+}
+
+.media-frame img,
+.media-frame video {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
   display: block;
-  background: linear-gradient(135deg, var(--surface), var(--surface-strong));
+}
+
+.media-icon {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: rgba(34, 13, 56, 0.82);
+  color: white;
+  font-size: 0.85rem;
 }
 
 .gallery-content {
   padding: 1rem;
+}
+
+.gallery-content strong {
+  display: block;
+  line-height: 1.35;
 }
 
 .gallery-content p {
